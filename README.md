@@ -2,15 +2,15 @@
 
 Kosovo Agency of Statistics (ASKdata) PxWeb MCP.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 693+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `subjects` | Navigate the subject tree. Root lists databases ({dbid}); start at "ASKdata". |
-| `table_meta` | Table definition (dimensions, valid values). Path must end in ".px". |
-| `query_table` | Pull data from a table (path ends in ".px"). body is a PxWeb query object. Mind the ~10,000-cell limit. |
+| `subjects` | Browse the Kosovo Agency of Statistics (ASKdata) PxWeb subject tree. Default path 'ASKdata' returns top-level folders (type 'l') and tables (type 't', '.px' suffix). Supply a deeper sub-path like 'ASKdata/Prices/Consumer Price Index' to drill into a subject area. |
+| `table_meta` | Fetch dimension definitions and valid coded values for a Kosovo ASKdata PxWeb table. Path must be the full path ending in '.px' (e.g. 'ASKdata/Prices/Consumer Price Index/Annual indicators/T4CPI.px'). Returns dimensions and value lists — required to build a valid query_table body. |
+| `query_table` | POST a PxWeb query to a Kosovo ASKdata table and return observations as json-stat2. body must be {query:[{code, selection:{filter,values}}], response:{format:'json-stat2'}}. PxWeb caps responses at ~10,000 cells — use codes from table_meta to narrow selections across dimensions. |
 
 ## Quick Start
 
@@ -26,7 +26,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 693+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -50,7 +50,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
