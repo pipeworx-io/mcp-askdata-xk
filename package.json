@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-askdata-xk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Kosovo Agency of Statistics (ASKdata) PxWeb MCP.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-788a71b54b196eaae7cd333dc694201cbb41ffc488e5cbff494560515ba02f2c",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "sourceHash": "v1-de84b04287fa0bf15ec1c5a6590e3baf39d973ee573924f64b29c73f408eecc2",
+    "sourceCommit": "454041882179fae560c06e770b6b7a2f33970015"
   }
 }
