@@ -10,7 +10,7 @@ import pack from './index.js';
 
 
 const server = new Server(
-  { name: '@pipeworx/mcp-askdata-xk', version: '0.1.3' },
+  { name: '@pipeworx/mcp-askdata-xk', version: '0.1.4' },
   { capabilities: { tools: {} } },
 );
 
